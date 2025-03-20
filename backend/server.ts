@@ -4,6 +4,7 @@ import db from "./app/models";
 import * as dotenv from "dotenv";
 import authRoutes from "./app/routes/auth.route";
 import userRoutes from "./app/routes/user.route";
+import notesRoutes from "./app/routes/notes.route";
 import swaggerSpec from "./app/config/swagger";
 import swaggerUi from "swagger-ui-express";
 
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/notes", notesRoutes);
 
 const PORT = process.env.PORT || 8080;
 

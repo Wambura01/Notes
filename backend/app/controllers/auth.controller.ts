@@ -19,10 +19,13 @@ export const signUp = async (req: Request, res: Response) => {
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 8),
     });
+
     const role = await Role.findOne({ name: "user" });
+
     if (!role) {
       throw new Error("Default user role not found");
     }
+
     user.roles = [role._id];
 
     await user.save();
