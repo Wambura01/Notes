@@ -20,7 +20,7 @@ const notesSchema = new Schema<INote>(
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: "Users",
     },
   },
   { timestamps: true }
