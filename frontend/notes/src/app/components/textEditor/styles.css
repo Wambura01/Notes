@@ -1,0 +1,36 @@
+/* Default color for toolbar buttons */
+.ql-snow.ql-toolbar button {
+  color: #444 !important;
+}
+
+/* Hover state for toolbar buttons */
+.ql-snow.ql-toolbar button:hover,
+.ql-snow.ql-toolbar button:focus {
+  color: white !important;
+}
+
+/* Active state for toolbar buttons */
+.ql-snow.ql-toolbar button.ql-active {
+  color: white !important;
+}
+
+/* Ensure the SVG icons inside the buttons inherit the color */
+.ql-snow.ql-toolbar button:hover svg,
+.ql-snow.ql-toolbar button:focus svg,
+.ql-snow.ql-toolbar button.ql-active svg {
+  opacity: 1;
+  color: white !important;
+}
+
+/* Ensure the stroke and fill of SVG icons inherit the color */
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow.ql-toolbar button:focus .ql-stroke,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke {
+  stroke: white !important;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow.ql-toolbar button:focus .ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-fill {
+  fill: white !important;
+}
