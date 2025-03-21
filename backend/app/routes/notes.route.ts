@@ -1,5 +1,5 @@
 import { Router, RequestHandler } from "express";
-import { createNote } from "../controllers/notes.controller";
+import { createNote, getAllNotes } from "../controllers/notes.controller";
 
 const router = Router();
 
@@ -37,5 +37,21 @@ const router = Router();
  */
 
 router.post("/create-note", createNote as RequestHandler);
+
+/**
+ * @swagger
+ * /api/notes/get-notes:
+ *   get:
+ *     tags:
+ *       - Notes
+ *     summary: Get all notes
+ *     description: Retrieve all notes created by the user
+ *     responses:
+ *       200:
+ *         description: Notes retrieved successfully
+ *       500:
+ *         description: Server error
+ */
+router.get("/get-notes", getAllNotes as RequestHandler);
 
 export default router;
