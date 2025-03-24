@@ -64,9 +64,7 @@ function Login() {
         roles: response.data.roles,
       });
       await setAuthCookie(response.data).then(() => {
-        setTimeout(() => {
-          redirect("/");
-        }, 2000);
+        redirect("/");
       });
     }
 

@@ -68,7 +68,7 @@ function CreateNote() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start h-screen bg-[#0F0F0F] w-[50%]">
+    <div className="flex flex-col items-center justify-start bg-[#0F0F0F] w-[50%]">
       <Toaster richColors position="top-right" />
       <div className="flex flex-col items-center justify-center bg-[#181818] rounded-lg p-4 w-[90%] shadow-lg">
         <div className="flex flex-col items-center justify-center gap-2 mb-2">
