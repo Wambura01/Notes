@@ -21,7 +21,7 @@ async function ListNotes({ ownerId }: { ownerId: string | undefined }) {
   console.log("notes", notes);
 
   return (
-    <div>
+    <div className="flex flex-wrap gap-4 overflow-y-auto">
       {notes.map((note) => (
         <NoteCard key={note._id} note={note} />
       ))}
